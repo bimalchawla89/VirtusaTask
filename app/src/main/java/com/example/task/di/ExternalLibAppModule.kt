@@ -46,7 +46,7 @@ class ExternalLibAppModule {
     @Singleton
     fun provideRetrofit(okHttpBuilder: OkHttpClient.Builder, moshi: Moshi): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(baseUrl)
+            .baseUrl(BuildConfig.BASE_URL)
             .client(okHttpBuilder.build())
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()

@@ -27,6 +27,30 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "version"
+    productFlavors {
+        dev {
+            dimension "version"
+            versionNameSuffix "-dev"
+            buildConfigField "String", 'BASE_URL', '"https://dog-api.kinduff.com/"'
+        }
+        staging {
+            dimension "version"
+            versionNameSuffix "-staging"
+            buildConfigField "String", 'BASE_URL', '"https://dog-api.kinduff.com/"'
+        }
+        qa {
+            dimension "version"
+            versionNameSuffix "-qa"
+            buildConfigField "String", 'BASE_URL', '"https://dog-api.kinduff.com/"'
+        }
+        prod {
+            dimension "version"
+            buildConfigField "String", 'BASE_URL', '"https://dog-api.kinduff.com/"'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

@@ -6,7 +6,6 @@ import javax.inject.Singleton
 
 const val timeoutRead = 30
 const val timeoutConnect = 30
-const val baseUrl="https://dog-api.kinduff.com/"
 
 @Singleton
 class ServiceGenerator  @Inject constructor(){

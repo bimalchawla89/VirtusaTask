@@ -103,3 +103,7 @@ i)when it does not meet the requirement (when we write the test the first time)
 ii)when the requirement is changed (then you have to change test cases as well)
 
 Don't pass context in viewmodel it makes it easier to test
+
+
+## Product Flavors
+4 flavors were used in app, dev, qa, staging, prod
